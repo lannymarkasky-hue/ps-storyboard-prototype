@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Storyboard Prototype</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 12px;
+      color: #e6e6e6;
+      background: #2b2b2b;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0 0 10px 0;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    button {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      background: #3c3c3c;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4a4a4a;
+    }
+
+    #status {
+      font-size: 12px;
+      color: #bdbdbd;
+      margin-bottom: 10px;
+      min-height: 16px;
+    }
+
+    #frameList {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .frame-item {
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: #363636;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .frame-item:hover {
+      background: #454545;
+    }
+
+    .frame-item.selected {
+      background: #5a5a5a;
+      outline: 1px solid #8a8a8a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Storyboard Prototype</h1>
+
+  <div id="status">Ready</div>
+
+  <div class="row">
+    <button id="refreshBtn">Refresh</button>
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
+  </div>
+
+  <div class="row">
+    <button id="moveUpBtn">Move Up</button>
+    <button id="moveDownBtn">Move Down</button>
+  </div>
+
+  <div id="frameList"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
